@@ -2,12 +2,17 @@ require 'spec_helper'
 
 describe "static pages" do
 
+
+  subject { page }
+
   describe "home page" do
-    it "should have the content 'sample app'" do
-      visit '/staticpages/home'
-      page.should have_content('sample app')
-      page.should have_selector("title", :text => "app")
-    end
+
+    before { visit root_path }
+
+    it { should have_selector("h1", text: "sample app") }
+    it { should have_selector 'title',
+                              text: "ruby on rails tutorial sample app" }
+    it { should_not have_selector 'title', text: '|home' }
   end 
 
   describe 'help page' do
