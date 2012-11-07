@@ -1,12 +1,14 @@
 DemoApp::Application.routes.draw do
   get "user/index"
+ 
+  root :to => "staticpages#home"
 
   get "user/show"
 
   get "staticpages/home"
 
   get "staticpages/help"
-
+  get "staticpages/about"
   resources :microposts
 
   resources :users
