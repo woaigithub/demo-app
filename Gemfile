@@ -15,10 +15,16 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'sqlite3'
 
 gem 'nokogiri', '1.5.5'
-gem 'rspec-rails', '2.11.0'  # unit-test
-gem 'guard-rspec', '1.2.1'   # auto unit test
-gem 'guard-spork', '1.2.0'
-gem 'spork', '0.9.2'         # speed unit test
+
+group :test do
+
+
+  gem 'rspec-rails', '2.11.0'  # unit-test
+  gem 'guard-rspec', '1.2.1'   # auto unit test
+  gem 'guard-spork', '1.2.0'
+  gem 'spork', '0.9.2'         # speed unit test
+  gem 'factory_girl_rails', '4.1.0'
+end 
 
 group :development do
   gem 'annotate', '2.5.0'  # annotate for model
