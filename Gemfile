@@ -1,8 +1,8 @@
-#source 'https://rubygems.org'
+source 'https://rubygems.org'
 
-#source 'https://rubygems.org'
+#source 'http://mirrors.tuna.tsinghua.edu.cn/rubygems/'
 
-source 'http://ruby.taobao.org'
+#source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.8'
 
@@ -10,15 +10,22 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bootstrap-sass', '2.0.4'
+gem 'bcrypt-ruby', '3.0.1'
 
 gem 'sqlite3'
 
 gem 'nokogiri', '1.5.5'
-gem 'rspec-rails', '2.11.0'
-gem 'guard-rspec', '1.2.1'
+gem 'rspec-rails', '2.11.0'  # unit-test
+gem 'guard-rspec', '1.2.1'   # auto unit test
 gem 'guard-spork', '1.2.0'
-gem 'spork', '0.9.2'
+gem 'spork', '0.9.2'         # speed unit test
+
+group :development do
+  gem 'annotate', '2.5.0'  # annotate for model
+end
+
 # Gems used only for assets and not required
+
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
